@@ -143,7 +143,7 @@ total_tokens_generated = 0
 total_generation_time = 0
 passed_count = 0
 
-print(f"Starting Robust Benchmark for: {MODEL}\n")
+print(f"Starting Performance Benchmark for: {MODEL}\n")
 
 for item in TEST_SUITE:
     salted_prompt = f"[Run-ID: {uuid.uuid4()}]\n{item['prompt']}"
@@ -206,7 +206,7 @@ aggregate_tps = total_tokens_generated / total_generation_time if total_generati
 median_ttft = statistics.median(ttft_valid) if ttft_valid else 0
 
 print("\n" + "="*60)
-print(f"SCIENTIFICALLY ADJUSTED REPORT: {MODEL}")
+print(f"STATS REPORT: {MODEL}")
 print("="*60)
 print(f"Accuracy Score:        {passed_count}/{len(TEST_SUITE)} ({passed_count/len(TEST_SUITE)*100:.1f}%)")
 print(f"Median TTFT (P50):     {median_ttft:.3f}s")
