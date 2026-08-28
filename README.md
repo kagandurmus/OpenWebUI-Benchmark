@@ -1,6 +1,5 @@
 # Open WebUI Model Benchmark
-
-This repository contains an automated evaluation suite designed to benchmark local Large Language Models (LLMs) served via Open WebUI. The framework is built to measure the true hardware speed of the models by automatically filtering out network lag and proxy delays.
+This repository contains an automated evaluation suite designed to benchmark local Large Language Models (LLMs) served via Open WebUI. The framework aims to evaluate model performance to find the smallest and fastest model that maintains high accuracy.
 
 ## How to Run
 
