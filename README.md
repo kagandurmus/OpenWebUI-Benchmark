@@ -1,6 +1,5 @@
 # Open WebUI Model Benchmark
-
-This repository contains an automated evaluation suite designed to benchmark local Large Language Models (LLMs) served via Open WebUI. The framework is built to measure the true hardware speed of the models by automatically filtering out network lag and proxy delays.
+This repository contains an automated evaluation suite designed to benchmark local Large Language Models (LLMs) served via Open WebUI. The framework aims to evaluate model performance to find the smallest and fastest model that maintains high accuracy.
 
 ## How to Run
 
@@ -30,10 +29,7 @@ The script runs a suite of 20 automated tasks to evaluate how well each model:
 
 ## Performance Results
 
-| Model Name | Architecture | Highest Accuracy | Lowest Accuracy | Median TTFT (s) | Decode Rate (tok/s) |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| **gpt-oss-120b** | 120B (MoE) | 85.0% (17/20) | 80.0% (16/20) | 0.766 | 278.13  |
-| **qwen3-32b** | 32B (Dense) | 80.0% (16/20) | 80.0% (16/20) | 1.413 | 53.84  |
+![Highest Accuracy](images/qwen3vsgpt-oss.png)
 
 ## Methodological Decisions
 * **Burst Suppression Filter:** Very short responses (< 15 tokens or < 0.1s) often arrive from web proxies in a single network packet, producing artificially inflated generation rates ($> 1000\text{ tok/s}$). These bursts are automatically excluded from the decode rate calculation to preserve hardware accuracy.
