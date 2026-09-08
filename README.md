@@ -43,7 +43,11 @@ gpt-oss: RAG Test with 2 Excel documents: 6/7 passed. This model is very suitabl
 
 qwen3: RAG Test with 2 Excel documents: 4/7 passed. This model usually considers the first document attached and ignores the other documents. In a context, where the target information lies in several documents, this LLM is not ideal. After carrefully attaching the second document as a prompt, a score of 6/7 was possible. This model works well with agentic tasks. 
 
+<<<<<<< HEAD
 Both models failed to answer following queston correctly: "Which product was sold most often?" This question can be answered via a simple python script or other agentic tools, but could not be realiably answered by any of or LLMs.
+=======
+Both models failed to answer following question correctly: "Which product was sold most often?" This question can be answered via a simple python script or other agentic tools, but could not be realiably answered by any of or LLMs.
+>>>>>>> 4ceeffe97551eb72d18dae7a25da5f42b2e5bdee
 
 
 ## Future Models to be Tested
