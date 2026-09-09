@@ -30,6 +30,7 @@ The script runs a suite of 20 automated tasks to evaluate how well each model:
 ## Performance Results
 
 ![Highest Accuracy](images/qwen3vsgpt-oss.png)
+![Highest Accuracy](images/Median_TTFT_(s).png)
 
 ## Methodological Decisions
 * **Burst Suppression Filter:** Very short responses (< 15 tokens or < 0.1s) often arrive from web proxies in a single network packet, producing artificially inflated generation rates ($> 1000\text{ tok/s}$). These bursts are automatically excluded from the decode rate calculation to preserve hardware accuracy.
@@ -43,11 +44,7 @@ gpt-oss: RAG Test with 2 Excel documents: 6/7 passed. This model is very suitabl
 
 qwen3: RAG Test with 2 Excel documents: 4/7 passed. This model usually considers the first document attached and ignores the other documents. In a context, where the target information lies in several documents, this LLM is not ideal. After carrefully attaching the second document as a prompt, a score of 6/7 was possible. This model works well with agentic tasks. 
 
-<<<<<<< HEAD
 Both models failed to answer following queston correctly: "Which product was sold most often?" This question can be answered via a simple python script or other agentic tools, but could not be realiably answered by any of or LLMs.
-=======
-Both models failed to answer following question correctly: "Which product was sold most often?" This question can be answered via a simple python script or other agentic tools, but could not be realiably answered by any of or LLMs.
->>>>>>> 4ceeffe97551eb72d18dae7a25da5f42b2e5bdee
 
 
 ## Future Models to be Tested
