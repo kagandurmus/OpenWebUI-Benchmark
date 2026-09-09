@@ -10,6 +10,10 @@ This repository contains an automated evaluation suite designed to benchmark loc
 API_KEY = "your_openai_api_key_here"
 BASE_URL = "https://your-endpoint-url-here/api"
 ```
+## Performance Results
+
+![Highest Accuracy](images/qwen3vsgpt-oss.png)
+![Highest Accuracy](images/Median_TTFT_(s).png)
 
 ## Methodology
 
@@ -27,10 +31,7 @@ The script runs a suite of 20 automated tasks to evaluate how well each model:
 
 > *Note: Reported metrics reflect the best of three independent benchmark runs per model.*
 
-## Performance Results
 
-![Highest Accuracy](images/qwen3vsgpt-oss.png)
-![Highest Accuracy](images/Median_TTFT_(s).png)
 
 ## Methodological Decisions
 * **Burst Suppression Filter:** Very short responses (< 15 tokens or < 0.1s) often arrive from web proxies in a single network packet, producing artificially inflated generation rates ($> 1000\text{ tok/s}$). These bursts are automatically excluded from the decode rate calculation to preserve hardware accuracy.
