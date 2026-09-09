@@ -13,7 +13,7 @@ BASE_URL = "https://your-endpoint-url-here/api"
 ## Performance Results
 
 ![Highest Accuracy](images/qwen3vsgpt-oss.png)
-![Highest Accuracy](images/Median_TTFT_(s).png)
+![Highest Accuracy](images/latest_benchmark.png)
 
 ## Methodology
 
