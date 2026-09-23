@@ -10,19 +10,25 @@ This repository contains an automated evaluation suite designed to benchmark loc
 API_KEY = "your_openai_api_key_here"
 BASE_URL = "https://your-endpoint-url-here/api"
 ```
+3. To run general tests with different models, open up "pyscript.py" and change the model name with the correct model as displayed in OpenWebUI:
+```text
+ MODEL = "company_name/exact_model_name" # e.g. "google/gemma-4-26B-A4B-it"
+```
+4. The results appear in the terminal.
+   
 ## General Performance Results
 
 ![Latest Benchmark](images/latest_benchmark.png)
 
 ## Methodology
 
-The script runs a suite of 36 automated tasks to evaluate how well each model:
+The script (pyscript.py) runs a suite of 36 general tasks to evaluate how well each model:
 *   **Follows strict instructions:** Such as avoiding forbidden words or formatting output strictly as JSON.
 *   **Recalls domain facts:** Answering specific questions about enterprise AI and hardware.
 *   **Writes code and solves math:** Generating Python scripts and calculating precision/recall metrics.
 *   **Synthesizes context (RAG):** Finding specific information hidden inside provided text while refusing to answer ungrounded questions.
 
-*   The RAG tests are based on two test files: products.csv and sales.csv.
+The RAG tests (RAG.py) are based on two test files: products.csv and sales.csv. It consists of 4 test questions
 
 ## How to Interpret the Metrics
 
